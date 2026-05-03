@@ -20,3 +20,24 @@
   <link rel="alternate" hreflang="{{ .Language.Lang }}" href="{{ .Permalink }}" />
   {{ end }}
   <script src="https://cdn.tailwindcss.com"></script>
+  {{ if .IsHome }}
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "Reviwise",
+    "url": "{{ .Site.BaseURL }}",
+    "description": {{ .Params.description | jsonify }},
+    "inLanguage": {{ .Language.LanguageCode | jsonify }},
+    "publisher": {
+      "@type": "Truezone",
+      "name": "Reviwise",
+      "url": "{{ .Site.BaseURL }}",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "{{ "favicon-96x96.png" | absURL }}"
+      }
+    }
+  }
+  </script>
+  {{ end }}
