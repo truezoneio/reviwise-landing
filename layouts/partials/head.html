@@ -1,0 +1,22 @@
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#4f47e6" />
+  <meta name="apple-mobile-web-app-title" content="Reviwise" />
+  <title>{{ .Title }}</title>
+  <meta name="description" content="{{ .Params.description }}" />
+  {{ with .Params.keywords }}
+  <meta name="keywords" content="{{ delimit . ", " }}" />
+  {{ end }}
+  <meta name="author" content="Reviwise" />
+  <meta name="robots" content="index, follow" />
+  <meta name="googlebot" content="index, follow" />
+  <meta name="google" content="notranslate" />
+  <link rel="icon" type="image/svg+xml" href="{{ "favicon.svg" | relURL }}" />
+  <link rel="icon" type="image/png" sizes="96x96" href="{{ "favicon-96x96.png" | relURL }}" />
+  <link rel="shortcut icon" href="{{ "favicon.ico" | relURL }}" />
+  <link rel="apple-touch-icon" sizes="180x180" href="{{ "apple-touch-icon.png" | relURL }}" />
+  <link rel="manifest" href="{{ "site.webmanifest" | relURL }}" />
+  {{ range .AllTranslations }}
+  <link rel="alternate" hreflang="{{ .Language.Lang }}" href="{{ .Permalink }}" />
+  {{ end }}
+  <script src="https://cdn.tailwindcss.com"></script>

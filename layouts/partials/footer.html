@@ -1,0 +1,22 @@
+<footer class="bg-slate-900 text-slate-400 py-8{{ if not .IsHome }} mt-16{{ end }}">
+  <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex flex-col md:flex-row justify-between items-center">
+      <div class="mb-4 md:mb-0">
+        <div class="flex items-center">
+          {{ partial "logo.html" . }}
+          <h1 class="font-bold text-white text-2xl">Reviwise</h1>
+        </div>
+      </div>
+
+      <div class="text-sm flex flex-col items-center md:items-end gap-2">
+        <p>&copy; {{ now.Year }} Reviwise. {{ i18n "footer_rights" }}</p>
+        <div class="flex gap-4">
+          <a href="{{ "/terms" | relURL }}" class="text-indigo-400 hover:text-indigo-300 transition-colors">{{ i18n "footer_terms" }}</a>
+          <a href="{{ "/privacy" | relURL }}" class="text-indigo-400 hover:text-indigo-300 transition-colors">{{ i18n "footer_privacy" }}</a>
+          <a href="{{ "/dpa" | relURL }}" class="text-indigo-400 hover:text-indigo-300 transition-colors">{{ i18n "footer_dpa" }}</a>
+        </div>
+        <a href="https://truezone.io" target="_blank" rel="noopener noreferrer" class="text-indigo-400 hover:text-indigo-300 transition-colors">Truezone</a>
+      </div>
+    </div>
+  </div>
+</footer>

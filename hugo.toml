@@ -1,0 +1,39 @@
+baseURL = "/"
+title = "Reviwise"
+defaultContentLanguage = "en"
+defaultContentLanguageInSubdir = false
+disableKinds = ["taxonomy", "term"]
+
+[languages]
+  [languages.en]
+    languageName = "English"
+    languageCode = "en-us"
+    weight = 1
+  [languages.tr]
+    languageName = "Türkçe"
+    languageCode = "tr"
+    weight = 2
+    title = "Reviwise"
+  [languages.es]
+    languageName = "Español"
+    languageCode = "es"
+    weight = 3
+    title = "Reviwise"
+  [languages.de]
+    languageName = "Deutsch"
+    languageCode = "de"
+    weight = 4
+    title = "Reviwise"
+  [languages.fr]
+    languageName = "Français"
+    languageCode = "fr"
+    weight = 5
+    title = "Reviwise"
+
+[params]
+  company = "Truezone Inc."
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
